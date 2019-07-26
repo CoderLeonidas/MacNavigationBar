@@ -1,22 +1,30 @@
 //
-//  NavigationBar.m
+//  MacNavigationBar.m
 //  MacNavigationBar
 //
 //  Created by leon on 2019/7/26.
 //  Copyright © 2019 Leonidas. All rights reserved.
 //
 
-#import "NavigationBar.h"
+#import "MacNavigationBar.h"
 
 @implementation NavigationBarItem {}
 @end
 
-@implementation NavigationBar {
+@implementation MacNavigationBar {
     struct {
         unsigned int mouseDragDidUpdateFlag : 1;
     }_delegateFlags;
     
     NSPoint _lastDragPt;
+}
+
+- (void)viewDidAppear {
+    NSWindowStyleMask mask = NSWindowStyleMaskFullSizeContentView ;
+    self.view.window.styleMask |= mask;
+    self.view.window.titlebarAppearsTransparent = YES;
+    self.view.window.titleVisibility = NSWindowTitleHidden;
+
 }
 
 - (void)initVars {

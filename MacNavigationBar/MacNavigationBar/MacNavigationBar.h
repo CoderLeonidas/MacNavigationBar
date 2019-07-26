@@ -1,5 +1,5 @@
 //
-//  NavigationBar.h
+//  MacNavigationBar.h
 //  MacNavigationBar
 //
 //  Created by leon on 2019/7/26.
@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-@interface NavigationBar : NSViewController
+@interface MacNavigationBar : NSViewController
 @property (nonatomic, weak) id<NavigationBarDelegate> delegate;
 @property (nonatomic, copy) NSArray <NavigationBarItem *> *items;
 

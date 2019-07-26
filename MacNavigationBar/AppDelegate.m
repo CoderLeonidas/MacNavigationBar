@@ -7,21 +7,32 @@
 //
 
 #import "AppDelegate.h"
-#import "NavigationBar.h"
+#import "MacNavigationBar.h"
 
 @interface AppDelegate () <NavigationBarDelegate>
 
 @property (weak) IBOutlet NSWindow *window;
-@property (nonatomic, strong) NavigationBar *bar;
+@property (nonatomic, strong) MacNavigationBar *bar;
 
 
 @end
 
 @implementation AppDelegate
 
+- (void)addNoti {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(layoutItems) name:NSWindowDidResizeNotification object:self.window];
+    
+}
+
+- (void)removeNoti {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    [self addNoti];
     
     [self.window.contentView addSubview:self.bar.view];
+    self.bar.view.autoresizingMask = (NSViewMinXMargin | NSViewMinYMargin | NSViewHeightSizable | NSViewMaxYMargin);
     self.bar.view.frame = NSMakeRect(0, 0, 69, NSHeight(self.window.contentView.frame));
     NSMutableArray *mItems = [NSMutableArray new];
     for (NSInteger i = 0; i < 4; i++) {
@@ -40,20 +51,33 @@
         
         NavigationBarItem *item = [NavigationBarItem new];
         item.view = btn;
-        item.y = NSHeight(self.window.frame) / 4 * (4-i-1) ;
         [mItems addObject:item];
     }
     
+    _bar.items = mItems;
+    [self layoutItems];
+}
+
+- (void)layoutItems {
+    NSMutableArray *mItems = [NSMutableArray new];
+    for (NSInteger i = 0; i <  _bar.items.count; i++) {
+        NavigationBarItem *item =  _bar.items[i];
+
+        item.y = NSHeight(self.window.contentView.frame) / 4 * (_bar.items.count-i-1);
+        [mItems addObject:item];
+    }
     _bar.items = mItems;
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
+    
+    [self removeNoti];
 }
 
-- (NavigationBar *)bar {
+- (MacNavigationBar *)bar {
     if (!_bar ) {
-        _bar = [NavigationBar new];
+        _bar = [MacNavigationBar new];
         _bar.delegate = self;
 
     }

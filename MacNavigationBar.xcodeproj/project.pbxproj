@@ -11,8 +11,8 @@
 		35679E1022EAE7E80057E483 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35679E0F22EAE7E80057E483 /* Assets.xcassets */; };
 		35679E1322EAE7E80057E483 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35679E1122EAE7E80057E483 /* MainMenu.xib */; };
 		35679E1622EAE7E80057E483 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35679E1522EAE7E80057E483 /* main.m */; };
-		35BCDA6922EAE9CD00D20259 /* NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BCDA6722EAE9CD00D20259 /* NavigationBar.m */; };
-		35BCDA6A22EAE9CD00D20259 /* NavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35BCDA6822EAE9CD00D20259 /* NavigationBar.xib */; };
+		35BCDA6922EAE9CD00D20259 /* MacNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BCDA6722EAE9CD00D20259 /* MacNavigationBar.m */; };
+		35BCDA6A22EAE9CD00D20259 /* MacNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35BCDA6822EAE9CD00D20259 /* MacNavigationBar.xib */; };
 		35BCDA6C22EB06F800D20259 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 35BCDA6B22EB06F800D20259 /* AppIcon.icns */; };
 		35BCDA6E22EB0E3800D20259 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 35BCDA6D22EB0E3800D20259 /* README.md */; };
 		35BCDA7022EB0F6600D20259 /* 效果预览.png in Resources */ = {isa = PBXBuildFile; fileRef = 35BCDA6F22EB0F6600D20259 /* 效果预览.png */; };
@@ -27,9 +27,9 @@
 		35679E1422EAE7E80057E483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35679E1522EAE7E80057E483 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35679E1722EAE7E80057E483 /* MacNavigationBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacNavigationBar.entitlements; sourceTree = "<group>"; };
-		35BCDA6622EAE9CD00D20259 /* NavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationBar.h; sourceTree = "<group>"; };
-		35BCDA6722EAE9CD00D20259 /* NavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationBar.m; sourceTree = "<group>"; };
-		35BCDA6822EAE9CD00D20259 /* NavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBar.xib; sourceTree = "<group>"; };
+		35BCDA6622EAE9CD00D20259 /* MacNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacNavigationBar.h; sourceTree = "<group>"; };
+		35BCDA6722EAE9CD00D20259 /* MacNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacNavigationBar.m; sourceTree = "<group>"; };
+		35BCDA6822EAE9CD00D20259 /* MacNavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MacNavigationBar.xib; sourceTree = "<group>"; };
 		35BCDA6B22EB06F800D20259 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
 		35BCDA6D22EB0E3800D20259 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		35BCDA6F22EB0F6600D20259 /* 效果预览.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "效果预览.png"; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		35679E0B22EAE7E70057E483 /* MacNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
-				35BCDA6522EAE81700D20259 /* View */,
+				35BCDA6522EAE81700D20259 /* MacNavigationBar */,
 				35679E0C22EAE7E70057E483 /* AppDelegate.h */,
 				35679E0D22EAE7E70057E483 /* AppDelegate.m */,
 				35BCDA6D22EB0E3800D20259 /* README.md */,
@@ -80,14 +80,14 @@
 			path = MacNavigationBar;
 			sourceTree = "<group>";
 		};
-		35BCDA6522EAE81700D20259 /* View */ = {
+		35BCDA6522EAE81700D20259 /* MacNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
-				35BCDA6622EAE9CD00D20259 /* NavigationBar.h */,
-				35BCDA6722EAE9CD00D20259 /* NavigationBar.m */,
-				35BCDA6822EAE9CD00D20259 /* NavigationBar.xib */,
+				35BCDA6622EAE9CD00D20259 /* MacNavigationBar.h */,
+				35BCDA6722EAE9CD00D20259 /* MacNavigationBar.m */,
+				35BCDA6822EAE9CD00D20259 /* MacNavigationBar.xib */,
 			);
-			path = View;
+			path = MacNavigationBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35BCDA6A22EAE9CD00D20259 /* NavigationBar.xib in Resources */,
+				35BCDA6A22EAE9CD00D20259 /* MacNavigationBar.xib in Resources */,
 				35BCDA6C22EB06F800D20259 /* AppIcon.icns in Resources */,
 				35BCDA6E22EB0E3800D20259 /* README.md in Resources */,
 				35BCDA7022EB0F6600D20259 /* 效果预览.png in Resources */,
@@ -164,7 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35679E1622EAE7E80057E483 /* main.m in Sources */,
-				35BCDA6922EAE9CD00D20259 /* NavigationBar.m in Sources */,
+				35BCDA6922EAE9CD00D20259 /* MacNavigationBar.m in Sources */,
 				35679E0E22EAE7E70057E483 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
