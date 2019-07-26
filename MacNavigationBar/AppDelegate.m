@@ -33,7 +33,7 @@
         btn.target = self;
         btn.action = @selector(btnClicked:);
         btn.wantsLayer = YES;
-        btn.layer.backgroundColor = [[NSColor orangeColor] colorWithAlphaComponent:0.9].CGColor;
+        btn.layer.backgroundColor = [[self randomColor] colorWithAlphaComponent:0.9].CGColor;
         NSImage *image = [NSImage imageNamed:@"AppIcon"];
         [image setSize:NSMakeSize(40, 40)];
         btn.image = image;
@@ -69,6 +69,13 @@
 - (void)mouseDragPointDidUpdate:(NSPoint)pt {
     NSPoint origin = NSMakePoint(self.window.frame.origin.x + pt.x, self.window.frame.origin.y + pt.y);
     [self.window setFrameOrigin:origin];
+}
+
+- (NSColor *)randomColor {
+    int R = (arc4random() % 256);
+    int G = (arc4random() % 256);
+    int B = (arc4random() % 256);
+    return [NSColor colorWithRed:R/255.0 green:G/255.0  blue:B/255.0  alpha:1.0];
 }
 
 @end
