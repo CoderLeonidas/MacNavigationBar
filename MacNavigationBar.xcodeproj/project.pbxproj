@@ -14,6 +14,7 @@
 		35BCDA6922EAE9CD00D20259 /* NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BCDA6722EAE9CD00D20259 /* NavigationBar.m */; };
 		35BCDA6A22EAE9CD00D20259 /* NavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35BCDA6822EAE9CD00D20259 /* NavigationBar.xib */; };
 		35BCDA6C22EB06F800D20259 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 35BCDA6B22EB06F800D20259 /* AppIcon.icns */; };
+		35BCDA6E22EB0E3800D20259 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 35BCDA6D22EB0E3800D20259 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		35BCDA6722EAE9CD00D20259 /* NavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationBar.m; sourceTree = "<group>"; };
 		35BCDA6822EAE9CD00D20259 /* NavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBar.xib; sourceTree = "<group>"; };
 		35BCDA6B22EB06F800D20259 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
+		35BCDA6D22EB0E3800D20259 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				35BCDA6522EAE81700D20259 /* View */,
 				35679E0C22EAE7E70057E483 /* AppDelegate.h */,
 				35679E0D22EAE7E70057E483 /* AppDelegate.m */,
+				35BCDA6D22EB0E3800D20259 /* README.md */,
 				35679E0F22EAE7E80057E483 /* Assets.xcassets */,
 				35BCDA6B22EB06F800D20259 /* AppIcon.icns */,
 				35679E1122EAE7E80057E483 /* MainMenu.xib */,
@@ -143,6 +146,7 @@
 			files = (
 				35BCDA6A22EAE9CD00D20259 /* NavigationBar.xib in Resources */,
 				35BCDA6C22EB06F800D20259 /* AppIcon.icns in Resources */,
+				35BCDA6E22EB0E3800D20259 /* README.md in Resources */,
 				35679E1022EAE7E80057E483 /* Assets.xcassets in Resources */,
 				35679E1322EAE7E80057E483 /* MainMenu.xib in Resources */,
 			);
