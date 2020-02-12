@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "MacNavigationBar.h"
 
-@interface AppDelegate () <NavigationBarDelegate>
+@interface AppDelegate () 
 
 @property (weak) IBOutlet NSWindow *window;
 @property (nonatomic, strong) MacNavigationBar *bar;
@@ -78,7 +78,6 @@
 - (MacNavigationBar *)bar {
     if (!_bar ) {
         _bar = [MacNavigationBar new];
-        _bar.delegate = self;
 
     }
     return _bar ;

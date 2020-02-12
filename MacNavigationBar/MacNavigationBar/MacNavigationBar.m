@@ -12,11 +12,7 @@
 @end
 
 @implementation MacNavigationBar {
-    struct {
-        unsigned int mouseDragDidUpdateFlag : 1;
-    }_delegateFlags;
     
-    NSPoint _lastDragPt;
 }
 
 - (void)viewDidAppear {
@@ -28,7 +24,6 @@
 }
 
 - (void)initVars {
-    _lastDragPt = NSZeroPoint;
     
     NSVisualEffectView *view = [NSVisualEffectView new];
     view.material = NSVisualEffectMaterialHUDWindow;
@@ -43,43 +38,11 @@
 
 #pragma mark - Events
 
-- (void)mouseDragged:(NSEvent *)event {
-    [super mouseDragged:event];
-  
-    [self drag];
-}
 
-- (void)mouseDown:(NSEvent *)event {
-    [super mouseDown:event];
-    _lastDragPt = [NSEvent mouseLocation] ;
-
-}
-
-- (void)mouseUp:(NSEvent *)event {
-    [super mouseUp:event];
-    _lastDragPt = NSZeroPoint;
-}
-
-- (void)drag {
-    if (_delegateFlags.mouseDragDidUpdateFlag){
-        NSPoint pt = [NSEvent mouseLocation] ;
-        if (NSEqualPoints(_lastDragPt, NSZeroPoint)){
-            _lastDragPt = pt;
-            return;
-        }
-        NSPoint newPt = NSMakePoint(pt.x - _lastDragPt.x, pt.y - _lastDragPt.y);
-        [self.delegate mouseDragPointDidUpdate:newPt];
-        _lastDragPt = pt;
-    }
-}
 
 
 #pragma mark - Setter
 
-- (void)setDelegate:(id<NavigationBarDelegate>)delegate {
-    _delegate = delegate;
-    _delegateFlags.mouseDragDidUpdateFlag = [_delegate respondsToSelector:@selector(mouseDragPointDidUpdate:)];
-}
 
 
 - (void)setItems:(NSArray<NavigationBarItem *> *)items {
